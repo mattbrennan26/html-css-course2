@@ -1,0 +1,130 @@
+.thumbnail {
+  width: 100%;
+  /*width: 300px;*/
+  display: block;
+  /*image takes up entire line pushing the search bar to a new line*/
+
+  /*don't add a height too*/
+  /*height:300px;
+      object-fit: cover; /*allows it to keep shape, views image but smaller - */
+  /*object-position: left; /*allows you to view one side of an image - change to right to see other guy*/
+  /*border-style: solid; /*use these to see where img is at*/
+  /*border-color: red;*/
+}
+
+
+
+/**change to inline block only take up as much space as needed - also two styles here
+    .video-author,
+    .video-stats{
+      display: inline-block;
+    }*/
+
+.div-element {
+  display: inline-block;
+  /*this is to keep it on its own not full line*/
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-preview {
+  width: 100%;
+  /*width: 300px;*/
+  /*display: inline-block;
+  /*by default a div is block taking up whole line - need to change to this if two divs on page*/
+  /*vertical-align: top;
+  /*this aligns divs to top of eachother*/
+  /*margin-right: 15px;*/
+}
+
+.video-title {
+  margin-top: 0;
+  /*eliminates space*/
+  font-size: 14px;
+  font-weight: 500;
+  /*bold sets to Roboto which would be 700 but we want less bold to 500 -*/
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.channel-picture {
+  /*display: inline-block; /*ensures they appear next to eachother
+      width: 50px; /*need to add this so that the images appear beside
+      vertical-align: top; /*aligning pic to top text*/
+}
+
+.video-info {
+  /*display: inline-block;
+      width: 200px;*/
+}
+
+.profile-picture {
+  width: 36px;
+  /*width: 100%; /*need to do this as images overflow - container is 50px so this needs to be same by being 100% of the div*/
+  border-radius: 50px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative; /*doesn't really change - appears normal unless position absolute in the viedo time*/
+}
+
+.video-time{
+  background-color: black;
+  color: white;
+  position: absolute;
+  /*the above and below set the time to a certain point on the thumnail row*/
+  bottom: 8px;
+  right: 5px;
+  
+  font-size: 12px;
+  font-weight: 500;
+  /*padding is inside also if all same just set padding*/
+  /*padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;*/
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.video-grid{
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+
+/*CSS activates if screen size is 750px or less only 2 columns in grid*/
+@media (max-width: 750px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(min-width:751px) and (max-width:999px;){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*min - so if it reaches 1000px then 4 */
+@media (min-width: 1000px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+

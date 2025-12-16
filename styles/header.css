@@ -1,0 +1,197 @@
+.search-bar {
+  font-size: 20px;
+  margin-left: 12px;
+  display: block;
+  /*force to take up entire line*/
+}
+
+.header{
+  height: 55px;
+  /*display and flex direction enure they aren't on top of one another*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*puts them to ends*/
+  /*position fixes it to top of page*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /*need a z-index so that the header appears above the thumbnails because we set the thumbnail to relative meaning it appears behind*/
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: rgb(233, 231, 231);
+}
+
+.left-section{
+  /*background-color: lightblue;*/
+  /*setting fixed width so it doesn't stretch*/
+  /*width: 150px; removed as we want width to stretch the entire section*/ 
+  display: flex; /*this and align items needed to centre - nested flexbox!*/
+  align-items: center;
+}
+
+.middle-section{
+  /*ackground-color: lightpink;*/
+  flex: 1; /*allows it to stretch*/
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px; /*flex stretches it but once it hits this it stops growing*/
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.search-button{
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  /*negative margin subtracts space - brings seach button closer to search bar*/
+  margin-left: -1px;
+  margin-right: 10px;
+  /*this is for the tooltip - setting tooltip to absolute is when magic happens*/
+}
+
+.search-button, .voice-search-button, .upload-icon-container{
+  /*want to make them centered*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*only this tooltip*/
+.search-button .tooltip, .voice-search-button .tooltip, .upload-icon-container .tooltip{
+  
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  /*below means if we hover over the tooltip it does nothing*/
+  pointer-events: none;
+  /*removes wrap around if text long*/
+  white-space: nowrap;
+}
+
+/*target tooltip only when hovering over button*/
+.search-button:hover .tooltip, 
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip{
+  opacity:1;
+}
+
+
+.search-icon{
+  height: 25px;
+  
+}
+
+.search-bar{
+  flex: 1; /*creates stretchable search box*/
+  height: 36px;
+  padding-left:12px;
+  font-size: 16px;
+  /*border below replaces the 3 below*/
+  border: 1px solid grey;
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: grey;*/
+  border-radius: 2px;
+  /*below inset means shadow on inside. horizontal, vertical, transparency, then rgd last value is the darkness*/
+  box-shadow: inset 1px 2px 3px rgb(0,0,0,0.05);
+  /*remove default width so searchbox shrinks as much as possible as it has a default*/
+  width:0;
+}
+
+/*below is how you target the placeholder on an element*/
+.search-bar::placeholder{
+  
+  font-size: 16px;
+}
+
+.voice-search-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px; /*set to half of height to make round*/
+  border: none;
+  background-color: rgb(245,245,245);
+}
+
+.voice-search-icon{
+  height: 24px;
+ 
+
+}
+.right-section{
+  margin-right: 20px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*prevent shrinking*/
+  flex-shrink: 0;
+}
+
+.upload-icon{
+  height: 24px;
+
+}
+
+.youtube-app-icon{
+  height: 24px;
+
+}
+
+.notifications-icon{
+  height: 24px;
+}
+
+/*absolute inside relative*/
+.notifications-icon-container{
+  position: relative;
+
+}
+
+.notifications-count{
+  position: absolute;
+  /*negative brings it out further*/
+  top:-2px;
+  right:-5px;
+  background-color: rgb(195, 1, 1);
+  color: white;
+  font-family: Roboto, Arial;
+  font-size: 11px;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:2px;
+  padding-bottom: 2px;
+  border-radius:10px;
+}
+
+.current-user-picture{
+  height: 32px;
+  border-radius: 16px;;
+}
+
+.hamburger-menu{
+  height:24px;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 20px;
+}
+
+.youtube-logo{
+  height: 20px;
+  align-items: center;
+}

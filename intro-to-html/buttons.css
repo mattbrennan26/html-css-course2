@@ -1,0 +1,71 @@
+.subscribe-button { /*you need to . to target a class*/
+  background-color: rgb(200, 0, 0);
+  color: white;
+  border: none;
+  /* dont want these as fixed height: 36px;
+  width: 105px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 2px; /*this makes rounded corners*/
+  cursor: pointer; /*changes the cursor*/
+  margin-right: 10px; /*sets space to right of button*/
+  margin-left:20px; /*sets space to left*/
+  vertical-align: top; /*instead of aligning by text - it aligns all by top*/
+  transition: opacity 0.15s; /*tansition of the opacity change*/
+}
+
+.subscribe-button:hover{ /*this is a pseudo class*/
+  opacity: 0.8; /*how see through an element is*/
+}
+
+.subscribe-button:active{ /*activates when we click on button*/
+  opacity: 0.4; /*how see through an element is*/
+}
+
+.join-button{
+  background-color: white;
+  color: rgb(0, 0, 236);
+  /* dont want to set these like this ... height: 36px; 
+  width: 60px;  instead use padding */
+  padding-left: 16px;
+  padding-top: 9px; /*changed to 9 as the border is 1px meaning that this is bigger - if border take into account*/
+  padding-right:16px;
+  padding-bottom: 9px;
+  border-color: rgb(0,0,236);
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid; /*ensures border is same colour all around*/
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: top; /*instead of aligning by text - it aligns all by top*/
+  transition: background-color 1s, color 1s; /*tansition of the opacity change - always put in higher*/
+}
+
+.join-button:hover{
+  background-color: rgb(0,0,236);
+  color: white;
+}
+
+.join-button:active{
+  opacity: 0.5;
+}
+
+.tweet-button{
+  background-color: rgb(0, 118, 214);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  height: 36px;
+  width: 70px;
+  border: none;
+  border-radius: 18px; /*rounded set to half of height*/
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+  vertical-align: top; /*instead of aligning by text - it aligns all by top*/
+}
+
+.tweet-button:hover{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15); /*horizontal, vertical, blur, color rgba is same color but opacity of color*/
+}

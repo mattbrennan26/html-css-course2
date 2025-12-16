@@ -1,0 +1,38 @@
+.sidebar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px; /*height of navbar*/
+  background-color: white;
+  width: 72px; 
+  z-index: 200;
+  padding-top: 5px;
+}
+
+.sidebar-link{
+  background-color: white;
+  height: 74px;
+  /*need the below to align vertically*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*displays elements on top of eachother*/
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sidebar-link:hover{
+  background-color: rgb(234, 232, 232);
+}
+
+/*new css technique for images - targeting all images in sidebar links only - not all images on page*/
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.sidebar-link div{
+ 
+  font-size: 10px;
+}
+
